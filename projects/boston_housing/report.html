@@ -14066,7 +14066,7 @@ For the <code>fit_model</code> function in the code cell below, you will need to
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong> Hint: </strong> The answer comes from the output of the code snipped above.</p>
-<p><strong>Answer: </strong> Parameter 'max_depth' is 6 for the optimal model. This is not the same as my guess above.</p>
+<p><strong>Answer: </strong> Parameter 'max_depth' is 6 for the optimal model. This is not the same as my guess above. This could be because of the similar validation score uncertainty of the 4 and 6 max depth models.</p>
 
 </div>
 </div>
@@ -14159,9 +14159,9 @@ Predicted selling price for Client 3&#39;s home: $1,014,300.00
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong> Predicted selling price for Client 1's home: $338,100.00
-Predicted selling price for Client 2's home: $180,600.00
-Predicted selling price for Client 3's home: $1,014,300.00</p>
+<p><strong>Answer: </strong> Predicted selling price for Client 1's home: 338,100.00.</p>
+<p>Predicted selling price for Client 2's home: 180,600.00. This is the smallest price because client 2 has the smallest house, in a neighborhood with a relatively high poverty rate and not the best public schools.</p>
+<p>Predicted selling price for Client 3's home: 1,014,300.00. This is the largest price because client 3 has has the biggest house, in the best public school neighborhood with the lowest poverty level.</p>
 <p>These prices seem reasonable given their respective features.</p>
 
 </div>
@@ -14242,7 +14242,8 @@ Range in prices: $69,044.61
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong> Data collected in 1978 could still be useful today as long as the final price estimates are adjusted for inflation. Inflation is an important factor but since it affects all prices equally it can be accounted for easily.</p>
+<p><strong>Answer: </strong> The constructed model seems like it should be improved before being used in a real-world setting. This is beacuse the trials shown above which were calculated based on a different split of training and testing datasets have a statistically large variance.</p>
+<p>Data collected in 1978 could still be useful today as long as the final price estimates are adjusted for inflation. Inflation is an important factor but since it affects all prices equally it can be accounted for easily.</p>
 <p>Based on the estimates given, the features present are likely sufficient to describe a home. However, other characteristics could be added to possibly make the model more robust.</p>
 <p>The model seems robust enough to make consistent predictions.</p>
 <p>Based on the characteristics used for the model, I think that the model would be applicable in a more rural city as the characteristics used are general enough to be applied to rural homes. However, you would probably have to adjust the final estimate down as it is cheaper to live in a rural area compared to a city.</p>
